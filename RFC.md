@@ -1,7 +1,7 @@
 ===== Introduction =====
 
-When a feature become deprecated its date of removal is not defined.
-One can argue that it will be dropped as the next major release, another will assume that it has several years to
+When a feature is deprecated its date of removal is not defined.
+One can argue that it will be dropped as the next major release, another will assume that he has several years to
 react (but how much?), in truth no one can say for sure: “it will be dropped in php X.X“. As a result, removal may arrive unexpectly for some people and  RFC’s like this one
 https://wiki.php.net/rfc/remove_deprecated_functionality_in_php7 are written. In our opinion, this  RFC should have been an upshot of php 7, not an RFC.
 
