@@ -2,22 +2,26 @@
 
 When a feature is deprecated its date of removal is not defined.
 One can argue that it will be dropped as the next major release, another will assume that he has several years to
-react (but how much?), in truth no one can say for sure: “it will be dropped in php X.X“. As a result, removal may arrive unexpectly for some people and  RFC’s like this one
-https://wiki.php.net/rfc/remove_deprecated_functionality_in_php7 are written. In our opinion, this  RFC should have been an upshot of php 7, not an RFC.
+react - without knowing how many. In truth no one can say for sure: “it will be dropped in php X.X“. As a result, removal may arrive unexpectedly for some people and  RFC’s like this one : https://wiki.php.net/rfc/remove_deprecated_functionality_in_php7 are written. In our opinion, this  RFC should have been an upshot of php 7, not an RFC.
 
 
 ===== Proposal =====
 
-Let’s define  a written in stone deprecation rule like: “a feature marked as deprecated will be remove in next major release”.
+Let’s define a deprecation rule: “a feature marked as deprecated will be removed in next major release. Error messages should include replacements.”.
 
 ===== What we win =====
 
-* Removal of deprecated features are automatically in the roadmap of the next major version
-* No time loss in debating whether the deprecated should be removed now or postponed sine die. (A deprecated is flagged for removal for that version of php when it became deprecated, end of question)
-* PHP user may anticpate actively and adapt is codebase on time instead of procrastinating.
+* Removal of deprecated features are always in the roadmap for the next major version
+* No time loss debating whether the deprecated features should be removed now or postponed sine die.
+* PHP users may anticipate actively and adapt their codebase before the end of life.
 
+===== Why to define replacements =====
+
+Active php users - who take care of evolutions of php - knows which features have to be used in replacement for the old one : mysqli vs mysql, grep vs ereg, etc. The deprecated message for mysql is very clear: Deprecated: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead. But for ereg it's a little less obvious: Deprecated: Function ereg() is deprecated. If the standard deprecated message always include the replacement feature, it will be easier to move forward to new versions of PHP.
+The standard message for any deprecated feature could be "Deprecated: \[Feature name] : The feature \[feature name] is deprecated and will be removed in \[PHP Version]. Use \[replacement feature] instead."
 
 ===== Wild World Examples =====
 
 * From the django project, deprecation policy https://docs.djangoproject.com/en/dev/internals/release-process/#internal-release-deprecation-policy
 * From the django project again, deprecation timeline https://docs.djangoproject.com/en/dev/internals/deprecation/
+* From the symfony project, roadmap for the symfony 3.0 project http://symfony.com/blog/symfony-3-0-the-roadmap
