@@ -17,7 +17,7 @@ Let’s define a deprecation rule: “a feature marked as deprecated will be rem
 
 ===== Why to define replacements =====
 
-Active php users - who take care of evolutions of php - knows which features have to be used in replacement for the old one : mysqli vs mysql, grep vs ereg, etc. The deprecated message for mysql is very clear: Deprecated: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead. But for ereg it's a little less obvious: Deprecated: Function ereg() is deprecated. If the standard deprecated message always include the replacement feature, it will be easier to move forward to new versions of PHP.
+Active php users - who take care of evolutions of php - knows which features have to be used in replacement for the old one : mysqli vs mysql, preg vs ereg, etc. The deprecated message for mysql is very clear: Deprecated: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead. But for ereg it's a little less obvious: Deprecated: Function ereg() is deprecated. If the standard deprecated message always include the replacement feature, it will be easier to move forward to new versions of PHP.
 The standard message for any deprecated feature could be "Deprecated: \[Feature name] : The feature \[feature name] is deprecated and will be removed in \[PHP Version]. Use \[replacement feature] instead."
 
 ===== Wild World Examples =====
