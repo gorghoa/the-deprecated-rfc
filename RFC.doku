@@ -7,19 +7,19 @@ react - without knowing how many. In truth no one can say for sure: “it will b
 
 ===== Proposal =====
 
-Let’s define a deprecation rule: “a feature marked as deprecated will be removed in next major release. Error messages should include replacements.”.
+Let’s define a deprecation rule: “a feature marked as deprecated will be removed in next major release.”
 
 ====== Security Concerns ======
 
-A deprecated functionnality may throw an exception before major release if the security issue worth it, implying a BC-Break in minor release.
+A deprecated feature may throw an exception before major release if the security issue worths it, implying a BC-Break in minor release.
 
 ====== Normalization of the deprecation message ======
 
-The deprecation message must include the version of PHP when the functionnality will be remove. 
+The deprecation message must include the version of PHP in which the feature will be removed. 
 
-====== Propose the new functionnality ======
+====== Propose the replacement feature ======
 
-The deprecation message should point to the functionnality that deprecated the old one.
+The deprecation message should point to the feature that deprecated the old one.
 
 
 ====== Exemple of normalized deprecated error ======
