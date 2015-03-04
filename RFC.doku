@@ -9,6 +9,25 @@ react - without knowing how many. In truth no one can say for sure: “it will b
 
 Let’s define a deprecation rule: “a feature marked as deprecated will be removed in next major release. Error messages should include replacements.”.
 
+====== Security Concerns ======
+
+A deprecated functionnality may throw an exception before major release if the security issue worth it, implying a BC-Break in minor release.
+
+====== Normalization of the deprecation message ======
+
+The deprecation message must include the version of PHP when the functionnality will be remove. 
+
+====== Propose the new functionnality ======
+
+The deprecation message should point to the functionnality that deprecated the old one.
+
+
+====== Exemple of normalized deprecated error ======
+
+
+Deprecated: Function split() is deprecated in /test.php on line 1 and will be remove in php 7, use explode() function instead (http://php.net/manual/en/function.explode.php)
+
+
 ===== What we win =====
 
 * Removal of deprecated features are always in the roadmap for the next major version
@@ -25,3 +44,5 @@ The standard message for any deprecated feature could be "Deprecated: \[Feature 
 * From the django project, deprecation policy https://docs.djangoproject.com/en/dev/internals/release-process/#internal-release-deprecation-policy
 * From the django project again, deprecation timeline https://docs.djangoproject.com/en/dev/internals/deprecation/
 * From the symfony project, roadmap for the symfony 3.0 project http://symfony.com/blog/symfony-3-0-the-roadmap
+
+
