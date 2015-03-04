@@ -2,8 +2,9 @@
 
 When a feature is deprecated its date of removal is not defined.
 One can argue that it will be dropped as the next major release, another will assume that he has several years to
-react - without knowing how many. In truth no one can say for sure: “it will be dropped in php X.X“. As a result, removal may arrive unexpectedly for some people and  RFC’s like this one : https://wiki.php.net/rfc/remove_deprecated_functionality_in_php7 are written. In our opinion, this  RFC should have been an upshot of php 7, not an RFC.
-
+react - without knowing how many. In truth no one can say for sure: “it will be dropped in php X.X“. 
+As a result, removal may arrive unexpectedly for some people and  RFC’s like this one : https://wiki.php.net/rfc/remove_deprecated_functionality_in_php7 are written. 
+In our opinion, this  RFC should have been an upshot of php 7, not an RFC.
 
 ===== Proposal =====
 
@@ -17,15 +18,18 @@ A deprecated feature may throw an exception before major release if the security
 
 The deprecation message must include the version of PHP in which the feature will be removed. 
 
-====== Propose the replacement feature ======
+===== Define replacements =====
 
-The deprecation message should point to the feature that deprecated the old one.
+Active php users - who take care of evolutions of php - knows which features have to be used in replacement for the old one : mysqli vs mysql, preg vs ereg, etc.
+The deprecated message for mysql is very clear: Deprecated: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead. 
+But for ereg it's a little less obvious: Deprecated: Function ereg() is deprecated. If the standard deprecated message always include the replacement feature, 
+it will be easier to move forward to new versions of PHP.
 
 
 ====== Exemple of normalized deprecated error ======
 
 
-Deprecated: Function split() is deprecated in /test.php on line 1 and will be remove in php 7, use explode() function instead (http://php.net/manual/en/function.explode.php)
+"Deprecated: \[Feature name] : The feature \[feature name] is deprecated and will be removed in \[PHP Version]. Use \[replacement feature] instead."
 
 
 ===== What we win =====
@@ -34,15 +38,9 @@ Deprecated: Function split() is deprecated in /test.php on line 1 and will be re
 * No time loss debating whether the deprecated features should be removed now or postponed sine die.
 * PHP users may anticipate actively and adapt their codebase before the end of life.
 
-===== Why to define replacements =====
-
-Active php users - who take care of evolutions of php - knows which features have to be used in replacement for the old one : mysqli vs mysql, preg vs ereg, etc. The deprecated message for mysql is very clear: Deprecated: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead. But for ereg it's a little less obvious: Deprecated: Function ereg() is deprecated. If the standard deprecated message always include the replacement feature, it will be easier to move forward to new versions of PHP.
-The standard message for any deprecated feature could be "Deprecated: \[Feature name] : The feature \[feature name] is deprecated and will be removed in \[PHP Version]. Use \[replacement feature] instead."
 
 ===== Wild World Examples =====
 
 * From the django project, deprecation policy https://docs.djangoproject.com/en/dev/internals/release-process/#internal-release-deprecation-policy
 * From the django project again, deprecation timeline https://docs.djangoproject.com/en/dev/internals/deprecation/
 * From the symfony project, roadmap for the symfony 3.0 project http://symfony.com/blog/symfony-3-0-the-roadmap
-
-
