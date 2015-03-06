@@ -34,7 +34,6 @@ But for ereg it's a little less obvious:
 
 If the standard deprecated message always includes the replacing feature, it will be easier to move forward to new versions of PHP.
 
-
 ====== Exemple of normalized deprecated error ======
 
 
