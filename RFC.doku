@@ -25,9 +25,12 @@ The deprecation message must include the version of PHP in which the feature wil
 Active php users — taking care of php evolutions — know which features have to be used instead of the old ones: mysqli vs mysql, preg vs ereg, etc.
 
 The deprecated message for mysql is very clear:
-Deprecated: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead.
+
+    Deprecated: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead.
+
 But for ereg it's a little less obvious:
-Deprecated: Function ereg() is deprecated.
+
+    Deprecated: Function ereg() is deprecated.
 
 If the standard deprecated message always includes the replacing feature, it will be easier to move forward to new versions of PHP.
 
