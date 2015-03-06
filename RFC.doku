@@ -1,10 +1,10 @@
 ===== Introduction =====
 
-When a feature is deprecated its date of removal is not defined.
+When a feature is deprecated, no date of removal is defined.
 One can argue that it will be dropped as the next major release, another will assume that he has several years to
 react - without knowing how many. In truth no one can say for sure: “it will be dropped in php X.X“. 
-As a result, removal may arrive unexpectedly for some people and  RFC’s like this one : https://wiki.php.net/rfc/remove_deprecated_functionality_in_php7 are written. 
-In our opinion, this  RFC should have been an upshot of php 7, not an RFC.
+As a result, removal may arrive unexpectedly for some people and  RFC’s like this : https://wiki.php.net/rfc/remove_deprecated_functionality_in_php7 are written. 
+In our opinion, this RFC should have been an upshot of php 7, not an RFC.
 
 ===== Proposal =====
 
@@ -20,7 +20,7 @@ The deprecation message must include the version of PHP in which the feature wil
 
 ===== Define replacements =====
 
-Active php users - who take care of evolutions of php - knows which features have to be used in replacement for the old one : mysqli vs mysql, preg vs ereg, etc.
+Active php users - who take care of the evolutions for php - knows which features have to be used in replacement of the old one : mysqli vs mysql, preg vs ereg, etc.
 The deprecated message for mysql is very clear: Deprecated: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead. 
 But for ereg it's a little less obvious: Deprecated: Function ereg() is deprecated. If the standard deprecated message always include the replacement feature, 
 it will be easier to move forward to new versions of PHP.
